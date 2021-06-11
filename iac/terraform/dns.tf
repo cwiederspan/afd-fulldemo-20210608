@@ -30,5 +30,5 @@ resource "azurerm_dns_cname_record" "afdverify" {
   zone_name           = azurerm_dns_zone.dns.name
   resource_group_name = azurerm_resource_group.rg.name
   ttl                 = 300
-  record              = local.afd_fqdn
+  record              = "afdverify.${local.afd_fqdn}"
 }
